@@ -97,7 +97,7 @@ header h2 {
 
 .controls button:hover {
     transition: .5s all;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .controls button:focus {
@@ -133,6 +133,11 @@ header h2 {
     left: 0;
     bottom: 0;
     z-index: 2;
+    cursor: grab;
+}
+
+.songInfo > input:active {
+    cursor: grabbing;
 }
 
 .progress-bar::-webkit-slider-thumb{

@@ -1,0 +1,181 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+
+header {
+    background-color: #6800E4;
+    border-bottom: #343332 2px solid;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+header h1 {
+    text-shadow: #A2B1C6 2px 2px 4px;
+    padding: 2%;
+    text-transform: uppercase;
+    font-size: clamp(2rem, 4vw, 4.8rem);
+}
+
+header h2 {
+    padding-bottom: 1%;
+}
+
+/* Music Player */
+
+.songInfo {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+}
+
+.songTitle {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: clamp(1.05rem, 3vw, 2.1rem);
+}
+
+.player {
+    transition: all 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    background: #6800E4;
+    position: relative;
+    margin: 4em;
+    height: 180px;
+    width: 90vw;
+    border: 1px solid black;
+    box-shadow: #51E678 1px 1px 2px;
+}
+
+.player:hover {
+    transition: all 0.2s;
+    transform: scale(1.05);
+    box-shadow: #51E678 5px 5px 10px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #343332;
+    width: 200px;
+    height: 180px;
+}
+
+.controls button {
+    transition: .5s all;
+    padding: 6%;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    font-size: 10px;
+    background-color: transparent;
+}
+
+.controls button:hover {
+    transition: .5s all;
+    transform: scale(1.2);
+}
+
+.controls button:focus {
+    outline: none;
+}
+
+.action {
+    padding: 1em;
+}
+
+.pause {
+    display: none;
+}
+
+.progress-bar {
+    position: absolute;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #51E678;
+    height: 10%;
+    left: 0;
+    bottom: 0;
+    border-right: 5px solid #3eac5b62;
+    z-index: 2;
+    width: 100%;
+}
+
+.songInfo > input {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    height: 10%;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.progress-bar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: #A2B1C6;
+    border-radius: 90px;
+}
+
+.progress-bar::-moz-range-thumb{
+    width: 50px;
+    height: 50px;
+}
+
+.bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+}
+
+.logoCiti {
+    width: 15%;
+    margin: 2rem;
+}
+
+/* Footer */
+
+footer {
+    background-color: #6800E4;
+    border-top: #343332 2px solid;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: clamp(2.4rem, 2vw, 4.8rem);
+}
+
+footer p {
+    color: #fff;
+    padding: 5% 5% 2% 5%;
+    text-shadow: #A2B1C6 -2px -2px 4px;
+}
